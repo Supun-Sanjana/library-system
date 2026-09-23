@@ -1,0 +1,91 @@
+/* --- Book-spine hero: a row of overlapping "spines" with rotated titles --- */
+.shelf {
+  display: flex;
+  align-items: flex-end;
+  gap: 8px;
+  height: 340px;
+  perspective: 1000px;
+}
+
+.spine {
+  border-radius: 6px 6px 0 0;
+  box-shadow: inset -4px 0 10px rgba(0,0,0,0.1), inset 4px 0 10px rgba(255,255,255,0.15), 0 15px 35px rgba(28,27,31,0.25);
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  padding-top: 24px;
+  position: relative;
+  transition: all 400ms cubic-bezier(0.25, 1, 0.5, 1);
+  transform-style: preserve-3d;
+  cursor: pointer;
+}
+
+.spine::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: linear-gradient(135deg, rgba(255,255,255,0.25) 0%, rgba(255,255,255,0) 100%);
+  border-radius: inherit;
+  pointer-events: none;
+}
+
+.spine span {
+  writing-mode: vertical-rl;
+  transform: rotate(180deg);
+  font-family: 'Fraunces', serif;
+  font-weight: 500;
+  letter-spacing: 0.04em;
+  color: rgba(255,253,248,0.95);
+  font-size: 14px;
+  white-space: nowrap;
+  text-shadow: 0 2px 4px rgba(0,0,0,0.25);
+}
+
+.shelf:hover .spine { transform: translateY(-4px) rotateX(2deg); opacity: 0.8; }
+.shelf .spine:hover { transform: translateY(-16px) scale(1.05) rotateX(0); opacity: 1; z-index: 10; box-shadow: inset -4px 0 10px rgba(0,0,0,0.1), inset 4px 0 10px rgba(255,255,255,0.2), 0 25px 50px rgba(28,27,31,0.35); }
+
+/* --- Catalog card: modernized with glassmorphism and smooth depth --- */
+.catalog-card {
+  position: relative;
+  transition: all 300ms cubic-bezier(0.25, 1, 0.5, 1);
+  background: rgba(255, 255, 255, 0.6);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.8);
+  box-shadow: 0 4px 20px -2px rgba(28, 27, 31, 0.04), 0 0 3px rgba(28, 27, 31, 0.02);
+  border-radius: 16px;
+  overflow: hidden;
+}
+
+.catalog-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 20px 40px -10px rgba(28, 27, 31, 0.12), 0 1px 3px rgba(28, 27, 31, 0.05);
+  background: rgba(255, 255, 255, 0.9);
+}
+
+.catalog-card::before {
+  content: '';
+  position: absolute;
+  top: -1px;
+  left: 24px;
+  width: 16px;
+  height: 16px;
+  background: #f7f5ef;
+  border-radius: 0 0 8px 8px;
+  border: 1px solid rgba(28,27,31,0.1);
+  border-top: none;
+  box-shadow: inset 0 2px 4px rgba(0,0,0,0.02);
+  z-index: 2;
+}
+
+/* --- Form inputs: Modernized focus states --- */
+.modern-input {
+  transition: all 200ms ease;
+  background: rgba(255, 255, 255, 0.7);
+  backdrop-filter: blur(8px);
+}
+.modern-input:focus {
+  background: #fff;
+  transform: translateY(-1px);
+  box-shadow: 0 8px 20px -4px rgba(183, 140, 86, 0.15), 0 0 0 2px rgba(183, 140, 86, 0.4);
+}
