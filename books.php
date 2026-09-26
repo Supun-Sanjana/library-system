@@ -1,4 +1,10 @@
 <?php
+/**
+ * Book catalog page.
+ *
+ * Displays all books available in the library with optional search by title/author
+ * and filtering by category. Requires the user to be logged in.
+ */
 require_once __DIR__ . '/config/db.php';
 require_once __DIR__ . '/includes/auth.php';
 

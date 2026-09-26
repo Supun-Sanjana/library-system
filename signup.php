@@ -1,4 +1,11 @@
 <?php
+/**
+ * User signup page.
+ *
+ * Handles new user registration. Validates input, hashes passwords,
+ * checks for unique emails, and inserts the new user into the database.
+ * Redirects already logged-in users to the catalog.
+ */
 require_once __DIR__ . '/config/db.php';
 require_once __DIR__ . '/includes/auth.php';
 

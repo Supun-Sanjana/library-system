@@ -1,4 +1,10 @@
 <?php
+/**
+ * Database connection configuration.
+ *
+ * Establishes a PDO connection to the MySQL database.
+ * If the connection fails, it displays a user-friendly error message and halts execution.
+ */
 // Database connection (PDO). Adjust these if your XAMPP MySQL setup differs.
 $DB_HOST = 'localhost';
 $DB_NAME = 'library_system';

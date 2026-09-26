@@ -1,4 +1,11 @@
 <?php
+/**
+ * User login page.
+ *
+ * Handles user authentication via email and password.
+ * On successful login, sets session variables and redirects to the catalog.
+ * Redirects already logged-in users to the catalog.
+ */
 require_once __DIR__ . '/config/db.php';
 require_once __DIR__ . '/includes/auth.php';
 

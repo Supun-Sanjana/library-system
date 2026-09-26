@@ -1,4 +1,10 @@
 <?php
+/**
+ * Shared HTML header template.
+ *
+ * Includes the common <head> setup, Tailwind CSS configuration,
+ * main navigation bar, and flash message display logic.
+ */
 require_once __DIR__ . '/auth.php';
 $current = basename($_SERVER['SCRIPT_NAME']);
 $pageTitle = $pageTitle ?? 'The Reading Room';

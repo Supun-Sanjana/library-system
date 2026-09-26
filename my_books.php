@@ -1,4 +1,11 @@
 <?php
+/**
+ * User's borrowed books page.
+ *
+ * Displays all books currently borrowed by the logged-in user,
+ * along with their due dates and overdue status.
+ * Requires the user to be logged in.
+ */
 require_once __DIR__ . '/config/db.php';
 require_once __DIR__ . '/includes/auth.php';
 

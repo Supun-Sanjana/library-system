@@ -1,4 +1,10 @@
 <?php
+/**
+ * Landing page.
+ *
+ * Displays a welcome message, features, and a preview of recently added books.
+ * Accessible to both logged-in and guest users.
+ */
 require_once __DIR__ . '/config/db.php';
 require_once __DIR__ . '/includes/auth.php';
 

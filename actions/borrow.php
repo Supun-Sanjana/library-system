@@ -1,4 +1,12 @@
 <?php
+/**
+ * Borrow book endpoint.
+ *
+ * Handles POST requests to borrow a specific book.
+ * Requires the user to be logged in. Checks if the book is available,
+ * updates the database to mark it as borrowed by the current user,
+ * and sets a due date 14 days from now.
+ */
 require_once __DIR__ . '/../config/db.php';
 require_once __DIR__ . '/../includes/auth.php';
 

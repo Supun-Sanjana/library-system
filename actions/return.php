@@ -1,4 +1,11 @@
 <?php
+/**
+ * Return book endpoint.
+ *
+ * Handles POST requests to return a specific book.
+ * Requires the user to be logged in and to be the current borrower of the book.
+ * Updates the database to mark the book as available (clears borrowed_by and due_date).
+ */
 require_once __DIR__ . '/../config/db.php';
 require_once __DIR__ . '/../includes/auth.php';
 
